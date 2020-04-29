@@ -1,0 +1,116 @@
+backend:
+  # name: github
+  name: git-gateway
+  repo: sajclarke/sunnies_website
+
+media_folder: assets/img/uploads
+
+collections:
+  - name: featured_products
+    label: "Featured Products"
+    folder: featured_products
+    identifier_field: title
+    extension: json
+    widget: "list"
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string}
+      - { name: description, label: Description, widget: text}
+      - { name: photo, label: Photo, widget: image }
+  - name: products
+    label: Products
+    folder: products
+    identifier_field: id
+    extension: json
+    widget: "list"
+    create: true
+    fields:
+      - { name: id, label: Id }
+      - { name: available, label: Available, widget: boolean, default: true}
+      - { name: stripe_sku, label: Stripe SKU, widget: string , required: false}
+      - { name: category, label: Category Name, widget: select, options: ["Women", "Women Best Sellers", "Unisex", "Unisex Best Sellers", "Mens", "Mens Best Sellers", "Prescriptions Lens", "Add-Ons"] }
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: string }
+      - { name: material, label: Material, widget: string }
+      - { name: price, label: Price, widget: number }
+      - { name: currency, label: Currency, widget: select, options: ['BDS','USD'] }
+      - { name: measurement, label: Measurement, widget: string }
+      - { name: color, label: Color, widget: string }
+      - { name: shipping, label: Shipping, widget: text }
+      - { name: photo, label: Photo, widget: image, required: false }
+      - { name: special, label: "On Special?", widget: select, default: ["None"], options: ["None", "Clearance", "Best Seller"] }
+  - name: lens
+    label: Lens
+    folder: lens
+    identifier_field: id
+    extension: json
+    widget: "list"
+    create: true
+    fields:
+      - { name: id, label: Id }
+      - { name: stripe_sku, label: Stripe SKU, widget: string , required: false}
+      - { name: category, label: Category Name, widget: select, options: ["none", "heading","progressive-lens", "bifocal", "single-vision"] }
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: string }
+      - { name: material, label: Material, widget: string }
+      - { name: price, label: Price, widget: number }
+      - { name: currency, label: Currency, widget: select, options: ['BDS','USD'] }
+      - { name: measurement, label: Measurement, widget: string }
+      - { name: color, label: Color, widget: string }
+      - { name: shipping, label: Shipping, widget: text }
+      - { name: photo, label: Photo, widget: image, required: false }
+      - { name: special, label: "On Special?", widget: select, default: ["None"], options: ["None", "Clearance", "Best Seller"] }
+      - { name: type, label: Type, widget: string}
+  - name: post
+    label: Blog
+    folder: posts
+    identifier_field: title
+    extension: json
+    widget: "list"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    # preview_path: "blog/{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: text }
+      - { name: photo, label: Photo, widget: image }
+      - { name: gallery, label: Gallery, widget: image, allow_multiple: true, required: false }
+      - { name: publishedOn, label: Published Date, widget: datetime, dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD-HH-mm"}
+      # - { name: publishedDate, label: Publish Date, widget: datetime, dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD-HH-mm"}
+  - name: prescriptions
+    label: Prescriptions
+    folder: prescriptions
+    identifier_field: title
+    extension: json
+    widget: "list"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: text }
+  - label: "Site Info"
+    name: "siteinfo"
+    folder: "site"
+    widget: "list"
+    extension: json
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Telephone", name: "telephone", widget: "string" }
+      - { label: "Contact Email", name: "email", widget: "string" }
+      - { label: "Address", name: "address", widget: "string" }
+      - { label: Mission, name: mission, widget: text }
+      - { label: Vision, name: vision, widget: text }
+      - { label: Description, name: description, widget: text }
+      - { label: "Owner Name", name: bioname, widget: string }
+      - { label: "About Owner", name: bio, widget: text }
+      - { label: "Owner Photo", name: biophoto, widget: image }
+      - { label: "Company Logo", name: "logo", widget: "image" }
+      - { label: "Shipping", name: "shipping", widget: "text" }
+      - { label: "Returns", name: "returns", widget: "text" }
+      - label: "Social Media Links"
+        name: "socialmedia"
+        widget: "object"
+        fields:
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Twitter", name: "twitter", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }

@@ -1,0 +1,6 @@
+node_modules
+*-lock.json
+build
+lambda
+# Local Netlify folder
+.netlify

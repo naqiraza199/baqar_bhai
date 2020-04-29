@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "partials/header.html" %}
+
+    <body>
+
+        {% set founder_name = siteinfo[0].bioname %}
+        {% set founder_bio = siteinfo[0].bio %}
+        {% set founder_photo = siteinfo[0].biophoto %}
+        {% set mission = siteinfo[0].mission %}
+        {% set vision = siteinfo[0].vision %}
+        {% set description = siteinfo[0].description %}
+        {% set telephone = siteinfo[0].telephone %}
+        {% set company_email = siteinfo[0].email %}
+        {% set company_address = siteinfo[0].address %}
+        {% set logo = siteinfo[0].logo %}
+        {% set shipping = siteinfo[0].shipping %}
+        {% set returns = siteinfo[0].returns %}
+        {% set facebook_url = siteinfo[0].socialmedia.facebook %}
+        {% set twitter_url = siteinfo[0].socialmedia.twitter %}
+        {% set instagram_url = siteinfo[0].socialmedia.instagram %}
+
+        <div class="site-wrap">
+            {% include "partials/nav.html" %}
+
+            {% block content %}{% endblock %}
+
+            {% include "partials/footer.njk" %}
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
+
+        
+        
+        <script src="/assets/js/jquery-ui.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bootstrap-input-spinner.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="/assets/js/aos.js"></script>
+
+        
+        
+        {# <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script> #}
+
+        <script src="/assets/js/main.js"></script>
+        
+        <script>
+
+        $(function() {
+        $('img').Lazy({effect: 'fadeIn',});
+    });
+
+            $("input[type='number']").inputSpinner();
+
+            console.log('{{site_title}}')
+            var items = [];
+            var products = [];
+            {# $.getJSON("/assets/data/products.json", function (data) {
+
+                console.log('json data',data);
+                localStorage.setItem('products',JSON.stringify(data))
+                //$.each(data, function (key, val) {
+                //    items.push(data)
+                //});
+
+                //console.log(items)
+                //products = items[0].products;
+                //console.log(products)
+            }); #}
+
+            
+
+            $('a[data-toggle=tooltip]').tooltip();
+
+            var infoModal = $("#myModal");
+            $(".openModal").on("click", function () {
+                console.log(this.value);
+                var product_id = parseInt(this.value) - 1
+                console.log(products[product_id])
+                // htmlData = $(this)
+                //   .find(".profile")
+                //   .html();
+                infoModal
+                    .find(".modal-title")
+                    .html(products[product_id].name);
+                infoModal
+                    .find(".modal-description")
+                    .html(products[product_id].ingredients);
+                infoModal
+                    .find(".product-directions")
+                    .html(products[product_id].directions);
+                infoModal
+                    .find(".product-disclaimer")
+                    .html(products[product_id].disclaimer);
+                infoModal.modal("show");
+                return false;
+            });
+        </script>
+        <script>
+
+        
+            let testForm = document.querySelector("#contact-form");
+      
+            testForm.addEventListener('submit', e => {
+                e.preventDefault();
+                console.log(testForm.getAttribute('action'))
+                const formData = new FormData(testForm);
+                fetch(testForm.getAttribute('action'), {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(res => {
+                    if (res) {
+                        console.log('success')
+                    }
+                });
+            });
+
+            //1. `sel` any collection of `form` and/or `input`, `select`, `textarea` 
+            //2. we assign value `1` if not exists to radios and checkboxes
+            // so that the server will receive `1` instead of `on` when checked
+            //3. we assign empty value to unchecked checkboxes 
+            function serialize(sel) {
+            var arr,
+                tmp,
+                i,
+                $nodes = $(sel);
+
+            // 1. collect form controls
+            $nodes = $nodes.map(function(ndx){
+                var $n = $(this);
+
+                if($n.is('form'))
+                    return $n.find('input, select, textarea').get();
+                return this;
+                });
+
+            // 2. replace empty values of <input>s of type=["checkbox"|"radio"] with 1 
+            // or, we end up with "on" when checked
+            $nodes.each(function(ndx, el){
+                if ((el.nodeName.toUpperCase() == 'INPUT') && ((el.type.toUpperCase() == 'CHECKBOX') || (el.type.toUpperCase() == 'RADIO'))){
+                    if((el.value === undefined) || (el.value == ''))
+                        el.value = 1;
+                }
+            });
+
+            // 3. produce array of objects: {name: "field attribute name", value: "actual field value"}
+            arr = $nodes.serializeArray();
+            tmp = [];
+            for(i = 0; i < arr.length; i++)
+                tmp.push(arr[i].name);
+
+            // 4. include unchecked checkboxes
+                $nodes.filter('input[type="checkbox"]:not(:checked)').each(function(){
+                if(tmp.indexOf(this.name) < 0){
+                    arr.push({name: this.name, value: ''});
+                }
+                });
+
+            return arr;
+            }
+
+            function getFormData(form){
+                //var unindexed_array = $(form).serializeArray();
+                var unindexed_array = serialize(form)
+                var indexed_array = {};
+
+                $.map(unindexed_array, function(n, i){
+                    if(indexed_array.hasOwnProperty(n['name'])){
+                        indexed_array[n['name']] += ','+n['value'];
+                    }else{
+                        indexed_array[n['name']] = n['value'];
+                    }
+                    
+                });
+
+                return indexed_array;
+            }
+
+            function updateCartItems(product_info){
+                var data_array = JSON.parse(localStorage.getItem("cart_items"))
+                console.log(data_array)
+
+                if(!data_array){
+                    data_array = []
+                }else{
+                    if (data_array.filter(e => e.id === product_info.id).length > 0) {
+                        //There is already a product with this id in the cart
+                        console.log('oops, product is already in the cart')
+                        return;
+                    }
+                }
+
+                data_array.push({
+                    id: product_info.id,
+                    sku: product_info.stripe_sku,
+                    image:"",
+                    product: product_info.title,
+                    price: product_info.price,
+                    quantity: product_info.quantity
+                });
+                console.log(data_array)
+
+                if(data_array.length > 0){
+                    cart_count.innerHTML = data_array.length
+                    cart_count.style.visibility = "visible"
+                }
+                //return
+                localStorage.setItem("cart_items",JSON.stringify(data_array))
+            }
+
+            function savePrescriptionInfo(form){
+
+                console.log(serialize(form))
+
+                //return false; //don't submit
+                //var data = JSON.stringify($(form).serializeArray()); //  <-----------
+                var prescription_data = getFormData(form)
+                console.log(prescription_data)
+                localStorage.setItem('prescriptions', prescription_data)
+
+                var products = JSON.parse(localStorage.getItem('products'))
+                console.log('current product', products[prescription_data.product_id])
+                //return;
+                var product_info = products[prescription_data.product_id]
+                console.log('product info',product_info)
+
+                //console.log(id, name, price, sku)
+                
+                product_info.quantity = 1
+                product_info.title +=' ('+product_info.color+' | '+product_info.material+')'
+                //return false;
+                updateCartItems(product_info)
+
+                //return false;
+                var lensOptions = prescription_data.lensOptions.split(',')
+                console.log(lensOptions)
+                var lens = JSON.parse(localStorage.getItem('lens'))
+                var lens_info = lens[lensOptions[0]]
+                console.log(lens, lens_info, lens[lensOptions[1]],lensOptions.length)
+                //return false;
+
+                for(var x = 0; x< lensOptions.length; x++){
+                    console.log('count',x)
+                    var lens = JSON.parse(localStorage.getItem('lens'))
+                    var lens_info = lens[lensOptions[x]]
+                    //var lens_info = lens[prescription_data.lensType]
+                    console.log('lens info',lens_info)
+
+                    //return false
+
+                    prescription_data.id = lens_info.id
+                    prescription_data.stripe_sku = lens_info.stripe_sku
+                    prescription_data.price = lens_info.price
+                    prescription_data.quantity = 1
+                    prescription_data.title = lens_info.title+'('+lens_info.shipping+')'
+                    updateCartItems(prescription_data)
+                    console.log('prescrip data', prescription_data)
+                    //setTimeout(function(){ alert("Hello"); }, 10000);
+                }
+                
+                
+                //return false;
+
+                swal({
+                    title: "Added to Cart!",
+                    text: 'You have added one '+product_info.title+' as well as a lens option ('+prescription_data.title+') to your cart!',
+                    icon: "success",
+                    buttons: {
+                        cancel: "Go to Cart",
+                        catch: {
+                            text: "Continue Shopping",
+                            value: true,
+                        },
+                    },
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = 'shop.html'
+                    } else {
+                        window.location = 'cart.html'
+                    }
+                });
+
+                
+                
+
+                //console.log(JSON.parse(data));
+                return false; //don't submit
+            }
+
+            function saveBillingInfo(form){
+                //var data = JSON.stringify($(form).serializeArray()); //  <-----------
+
+                var shipping_data = getFormData(form)
+                //console.log(shipping_data);
+
+                swal({
+                    title: "Proceed to payment?",
+                    text: "Kindly confirm that you want to proceed with this purchase",
+                    icon: "warning",
+                    buttons: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        const {shippingform_fname, shippingform_lname,shippingform_address,shippingform_email, shippingform_telephone, shippingform_instructions} = shipping_data
+
+                        var form_data = {
+                            name: shippingform_fname + ' ' + shippingform_lname,
+                            address:shippingform_address,
+                            telephone:shippingform_telephone,
+                            email: shippingform_email,
+                            instructions: shippingform_instructions,
+                            sheetId:'0',
+                            date: new Date().toString()
+                        }
+
+                        console.log('shipping info', form_data)
+
+                        $.ajax({
+                            //url: "http://localhost:9000/sheets",
+                            //url:"/.netlify/functions/sheets",
+                            url:"{{functions_api}}",
+                            type: "POST",
+                            crossDomain: true,
+                            data: JSON.stringify(form_data),
+                            dataType: "json",
+                            success: function (response) {
+                                var resp = JSON.parse(response)
+                                alert(resp.status);
+                            },
+                            error: function (xhr, status) {
+                                console.log(xhr, status)
+                                //alert("error");
+                            }
+                        });
+
+                    
+                    }
+                });
+
+                
+                return false; //don't submit
+            }
+
+            function saveMailingContact(form){
+                var mailing_contact = getFormData(form)
+                console.log(mailing_contact);
+
+                /*$.post( "http://localhost:9000/sheets", { sheetId:"1", email:"shannon@shannonclarke.com" })
+                .done(function( data ) {
+                    alert( "Data Loaded: " + data );
+                });*/
+
+                 $.ajax({
+                    //url: "http://localhost:9000/sheets",
+                    //url:"/.netlify/functions/sheets",
+                    url:"{{functions_api}}",
+                    type: "POST",
+                    crossDomain: true,
+                    data: JSON.stringify({ sheetId:"1", name:'',email:mailing_contact.email_subscribe, date: new Date().toString()}),
+                    dataType: "json",
+                    success: function (response) {
+                        var resp = JSON.parse(response)
+                        alert(resp.status);
+                    },
+                    error: function (xhr, status) {
+                        console.log(xhr, status)
+                        //alert("error");
+                    }
+                });
+
+                //Show success
+                document.getElementById('subscribe-success').style.display="block"
+                //Hide input field
+                document.getElementById('subscribe-form').style.display="none"
+                return false; //don't submit
+            }
+
+            
+
+            function addToCart(){
+                var product_id = document.getElementById("item_id").innerHTML;
+                console.log('clicked on product with id: ', product_id)
+
+                var products = JSON.parse(localStorage.getItem('products'))
+                console.log('current product', products[product_id])
+                //return;
+                var product_info = products[product_id]
+                console.log('product info',product_info)
+
+                //console.log(id, name, price, sku)
+                var item_quantity = document.getElementById("item_quantity").value;
+                console.log(item_quantity)
+                product_info.quantity = item_quantity
+                product_info.title +=' ('+product_info.color+' | '+product_info.material+')'
+                
+                updateCartItems(product_info)
+                //window.location = 'cart.html'
+
+                
+
+                swal({
+                    title: "Added to Cart!",
+                    text: 'You have added '+item_quantity+' '+product_info.title+'(s) to your cart!',
+                    icon: "success",
+                    buttons: {
+                        cancel: "Go to Cart",
+                        catch: {
+                            text: "Continue Shopping",
+                            value: true,
+                        },
+                    },
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = 'shop.html'
+                    } else {
+                        window.location = 'cart.html'
+                    }
+                });
+
+                
+
+            }
+
+            function deleteRow(el, item_id) {
+                console.log('delete row',el.parentNode)
+                // while there are parents, keep going until reach TR 
+                while (el.parentNode && el.tagName.toLowerCase() != 'tr') {
+                    el = el.parentNode;
+                }
+
+                // If el has a parentNode it must be a TR, so delete it
+                // Don't delte if only 3 rows left in table
+                if (el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+
+                var cart_items = JSON.parse(localStorage.getItem("cart_items"))
+                var new_items = cart_items.filter((item) => item.id !== item_id)
+                console.log(new_items)
+
+                if(new_items.length > 0){
+                    cart_count.innerHTML = data_array.length
+                    //cart_count.style.visibility = "visible"
+                }else{
+                    cart_count.innerHTML = 0
+                    cart_count.style.visibility="hidden"
+                }
+
+                localStorage.setItem("cart_items",JSON.stringify(new_items))
+
+                updateFinalCosts(new_items)
+            }
+
+            function updateFinalCosts(items){
+                
+                console.log('update final costs')
+                
+                console.log(items)
+
+                 var total_cost = 0;
+
+                for(var i=0; i<items.length; i++){
+                    total_cost += parseFloat(items[i].price)*parseFloat(items[i].quantity)
+                }
+
+                //console.log(total_cost)
+
+                document.getElementById('sub_total').innerHTML = "$ "+parseFloat(total_cost).toFixed(2)
+                document.getElementById('final_total').innerHTML = "$ "+parseFloat(total_cost).toFixed(2)
+            }
+
+            function alphanumeric_unique() {
+                return Math.random().toString(36).split('').filter( function(value, index, self) { 
+                    return self.indexOf(value) === index;
+                }).join('').substr(2,8);
+            }
+
+            function tryItOn(){
+                console.log('try it on')
+            }
+
+
+        </script>
+
+        <script>
+            
+            //DISPLAY ITEMS IN CART
+            {# console.log('display items in cart')
+            var data_array = JSON.parse(localStorage.getItem("cart_items"))
+            console.log(data_array)
+
+            var cart_count = document.getElementById("cart_count")
+            if(data_array.length > 0){
+                cart_count.innerHTML = data_array.length
+                cart_count.style.visibility = "visible"
+            }
+            
+
+            var table = document.getElementById("shopping-cart");
+
+            if(data_array.length < 1){
+                table.style.display = 'none'
+                var cart_notice = document.getElementById('empty_cart_notice')
+                if(cart_notice)
+                    cart_notice.style.display="block"
+            }else{
+                //table.style.display = 'block'
+                var cart_notice = document.getElementById('empty_cart_notice')
+                if(cart_notice)
+                    cart_notice.style.display="none"
+            }
+            var total_cost = 0;
+
+            for(var i=0; i<data_array.length; i++){
+
+                // Create an empty <tr> element and add it to the 1st position of the table:
+                var row = table.insertRow(1);
+
+                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                //var cell4 = row.insertCell(3);
+
+                // Add some text to the new cells:
+                cell1.innerHTML = "<a href='product.html?id="+data_array[i].id+"'>"+data_array[i].product+"</a> x "+data_array[i].quantity;
+                cell2.innerHTML = "$ "+parseFloat(data_array[i].price*data_array[i].quantity).toFixed(2)+"      ";
+                //cell3.innerHTML = data_array[i].quantity;
+                cell3.innerHTML = "<button class='btn btn-outline-danger' product_id='"+data_array[i].id+"' onclick=\"deleteRow(this,'"+data_array[i].id+"')\">x</button>";
+
+                total_cost += parseFloat(data_array[i].price)*parseFloat(data_array[i].quantity)
+            }
+
+            console.log(total_cost)
+
+            document.getElementById('sub_total').innerHTML = "$ "+parseFloat(total_cost).toFixed(2)
+            document.getElementById('final_total').innerHTML = "$ "+parseFloat(total_cost).toFixed(2) #}
+
+            
+        </script>
+
+        <!-- Load Stripe.js on your website. -->
+        <script src="https://js.stripe.com/v3"></script>
+        
+        <script>
+            (function () {
+              var stripe = Stripe('{{stripe_key}}');
+              //var stripe = Stripe('pk_live_HEnlS2Pd3aY9uYctGiws23fs');
+              // Richieann
+              //var stripe = Stripe('pk_live_6JxSfq1ltlJKfDJfMj2cTGNn00fmKxrq3i');
+
+              var btn_addDelivery = document.getElementById('btn_addDelivery');
+              btn_addDelivery.addEventListener('change', function () {
+                
+                if(this.checked) {
+                    // Checkbox is checked..
+                    console.log('add delivery')
+                    var table = document.getElementById("shopping-cart");
+                    var row = table.insertRow(1);
+
+                    row.id='delivery_cost'
+
+                    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+
+                    // Add some text to the new cells:
+                    cell1.innerHTML = "Delivery";
+                    cell2.innerHTML = "$ 20.00";
+                    //cell3.innerHTML = data_array[i].quantity;
+                    cell3.innerHTML = "";
+
+                    var final_cost = document.getElementById('final_total').innerHTML;
+                    final_cost = final_cost.replace(/\$/g, '');
+                    //console.log(final_cost)
+                    final_cost = parseFloat(final_cost) +  20
+                    //console.log(final_cost)
+
+                    document.getElementById('final_total').innerHTML = "$ "+parseFloat(final_cost).toFixed(2)
+
+                } else {
+                    // Checkbox is not checked..
+                    console.log('remove delivery')
+                    var row = document.getElementById('delivery_cost');
+                    row.parentNode.removeChild(row);
+                }
+                  
+
+              });
+
+              var checkoutButton = document.getElementById('checkout-button');
+              checkoutButton.addEventListener('click', function () {
+
+                console.log(getFormData('#billing_form'))
+                var billing_form = getFormData('#billing_form')
+                const {shippingform_fname, shippingform_lname,shippingform_address,shippingform_email, shippingform_telephone, shippingform_instructions} = billing_form
+                if(shippingform_fname.length < 1 || shippingform_lname.length < 1 || shippingform_email.length < 1){
+                    swal("Please fill out all fields!", "You need to enter your billing details", "error");
+                    return
+                }
+                return; 
+                var cart_items = JSON.parse(localStorage.getItem("cart_items"))
+
+                if("{{environment}}"==="test"){
+                    var checkout_array = [{ sku: 'sku_GeHtCV10DKJRZn', quantity: 1 },{sku: 'sku_GeINSvjcP8C0ck', quantity: 1}]
+                }else{
+                    var checkout_array = []
+                    cart_items.map(item=>checkout_array.push({sku:item.sku, quantity: parseInt(item.quantity)}))
+                }
+                
+                console.log('checkout',checkout_array)
+
+                var cart_skus = cart_items.map(item=>item.sku).join(',')
+                const cart_total = cart_items.reduce( ( sum, { price } ) => sum + price , 0)
+                console.log( cart_total )
+                //var order_info = {}
+                
+                
+                //order_info.name=billing_form.shippingform_fname + ' ' + billing
+
+                var unique_id = alphanumeric_unique()
+
+                var order_info = {
+                            orderid: unique_id,
+                            name: shippingform_fname + ' ' + shippingform_lname,
+                            address:shippingform_address,
+                            telephone:shippingform_telephone,
+                            email: shippingform_email,
+                            delivery: shippingform_instructions,
+                            skus:cart_skus,
+                            total: cart_total,
+                            sheetId:'0',
+                            date: new Date().toString()
+                        }
+                console.log(order_info)
+
+                localStorage.setItem("order_info",JSON.stringify(order_info))
+                //return
+                // When the customer clicks on the button, redirect
+                // them to Checkout.
+                stripe.redirectToCheckout({
+                  
+                  //live items
+                  //items: [{ sku: 'sku_GZ2BWHOxgx2TSg', quantity: 1 }],
+                  //Richieann
+                  //items: [{ sku: 'sku_GZ5MJ23DUG6rCH', quantity: 1 }],
+                  //test items
+                  //items: [{ sku: 'sku_GeHtCV10DKJRZn', quantity: 1 },{sku: 'sku_GeINSvjcP8C0ck', quantity: 1}],
+                  items: checkout_array,
+                  //billingAddressCollection:'required',
+
+                  // Do not rely on the redirect to the successUrl for fulfilling
+                  // purchases, customers may not always reach the success_url after
+                  // a successful payment.
+                  // Instead use one of the strategies described in
+                  // https://stripe.com/docs/payments/checkout/fulfillment
+                  successUrl: '{{success_url}}',
+                  cancelUrl: '{{cancel_url}}',
+                })
+                  .then(function (result) {
+                    if (result.error) {
+                      // If `redirectToCheckout` fails due to a browser or network
+                      // error, display the localized error message to your customer.
+                      var displayError = document.getElementById('error-message');
+                      displayError.textContent = result.error.message;
+                    }
+
+                    //TODO: Send email with customer prescription info
+                    console.log('send email', result)
+                  });
+              });
+            })();
+          </script>
+
+          
+    </body>
+</html>
