@@ -899,3 +899,9 @@ div.special2{
 .center{
 	text-align:center;
 }
+.black{
+	color:#000;
+}
+.heading{
+	margin-bottom:20px;
+}
