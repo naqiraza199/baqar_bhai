@@ -880,6 +880,14 @@ text-align:left;
 	float:right;
 	text-align:right;
 }
-img.contain{
-	max-width:100%;
+img.contain1{
+	max-width:233px;
+}
+div.special1{
+	float: left;
+	padding: 29px 58px 13px 14px;
+    background: linear-gradient(45deg, #8880f5, #433ca0);
+}
+.white{
+	color:#fff;
 }
