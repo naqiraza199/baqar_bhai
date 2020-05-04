@@ -888,6 +888,11 @@ div.special1{
 	padding: 29px 40px 13px 0px;
     background: linear-gradient(45deg, #8880f5, #433ca0);
 }
+div.special2{
+	float: right;
+	padding: 29px 40px 13px 0px;
+    background: linear-gradient(45deg, #8880f5, #433ca0);
+}
 .white{
 	color:#fff;
 }
