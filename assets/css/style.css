@@ -872,3 +872,14 @@ padding: 2px 15px;
 .tab-card-header > .tab-content {
 padding-bottom: 0;
 }
+.left{
+float:left;
+text-align:left;	
+}
+.right{
+	float:right;
+	text-align:right;
+}
+img.contain{
+	max-width:100%;
+}
