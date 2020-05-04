@@ -885,13 +885,13 @@ img.contain1{
 }
 div.special1{
 	float: left;
-	padding: 29px 40px 13px 0px;
-    background: linear-gradient(45deg, #8880f5, #433ca0);
+	padding: 30px 7px 13px 0px;
+	background: linear-gradient(45deg, #8880f5, #433ca0);
 }
 div.special2{
 	float: right;
 	padding: 29px 40px 13px 0px;
-    background: linear-gradient(45deg, #8880f5, #433ca0);
+	background: linear-gradient(45deg, #4740a5, #7c75e7);
 }
 .white{
 	color:#fff;
