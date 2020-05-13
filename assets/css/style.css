@@ -5,6 +5,10 @@ body {
   font-weight: 300;
   font-size: 16px; }
 
+.bg-light.py-3 {
+    background: linear-gradient(45deg, #8954b1, #64427f) !important;
+}
+
 ::-moz-selection {
   background: #000;
   color: #fff; }
