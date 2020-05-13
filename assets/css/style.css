@@ -5,9 +5,14 @@ body {
   font-weight: 300;
   font-size: 16px; }
 
+img.img-fluid {
+    height: inherit;
+}
+
 .block-4-text.p-4 {
     background: linear-gradient(45deg, #663889, #7e4ba6);
     color: #fff;
+    font-size: 12px;
 }
 
 p.text-primary.font-weight-bold {
