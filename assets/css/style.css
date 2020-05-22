@@ -1374,10 +1374,11 @@ div.special2 {
 .right-cat{
     
     background-image: url(../img/right-cat.jpg);
-
+    width: 496px;
+    height: 511px;
 }
 .right-cat, .left-cat{
-    height: 510px;
+   
 }
 .top-cat{
     background-image: url(../img/top-cat.jpg);
