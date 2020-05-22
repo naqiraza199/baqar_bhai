@@ -1371,3 +1371,8 @@ div.special2 {
     opacity: .3;
     pointer-events: none;
 }
+.right-cat{
+    height: 400px;
+    background-image: url(./assets/img/right-cat.webp);
+
+}
