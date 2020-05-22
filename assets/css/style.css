@@ -1408,3 +1408,6 @@ div.special2 {
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
+.container {
+    max-width: 930px !important;
+}
