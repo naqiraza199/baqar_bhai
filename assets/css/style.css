@@ -1381,9 +1381,11 @@ div.special2 {
 }
 .top-cat{
     background-image: url(../img/top-cat.jpg);
+    width: 404px;
     height: 230px;
 }
-.bootom-cat{
+.botom-cat{
     background-image: url(../img/bottom-cat.jpg);
+    width: 404px;
     height: 230px;
 }
