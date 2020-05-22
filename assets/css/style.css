@@ -1384,6 +1384,7 @@ div.special2 {
     background-image: url(../img/top-cat.jpg);
     width: 404px;
     height: 230px;
+    margin-bottom: 12%;
 }
 .bottom-cat{
     background-image: url(../img/bottom-cat.jpg);
@@ -1416,4 +1417,10 @@ div.special2 {
 }
 .container {
     max-width: 930px !important;
+}
+.cat-title{
+    font-size: 56px;
+    color: #fff;
+    margin-bottom: 5px;
+    padding-top: 35px;
 }
