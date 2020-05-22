@@ -1407,10 +1407,12 @@ div.special2 {
     background-color: #fff;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
+    border: 2px solid black;
 }
 .cat-button:hover{
     background-color: #000;
     color: white;
+    border-color: white;
 }
 .container {
     max-width: 930px !important;
