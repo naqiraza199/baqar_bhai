@@ -1390,3 +1390,21 @@ div.special2 {
     width: 404px;
     height: 230px;
 }
+.cat-button{
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    right: 30px;
+    bottom: -20px;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: -.18px;
+    color: #2d2d2d;
+    font-family: Arial Black;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
