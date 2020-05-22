@@ -1390,6 +1390,7 @@ div.special2 {
     background-image: url(../img/bottom-cat.jpg);
     width: 404px;
     height: 230px;
+    padding-left: 50px;
 }
 .cat-button{
     position: absolute;
@@ -1422,5 +1423,10 @@ div.special2 {
     font-size: 56px;
     color: #fff;
     margin-bottom: 5px;
-    padding-top: 35px;
+    padding-top: 65px;
+}
+.cat-desc{
+    font-style: italic;
+    font-size: 28px;
+    color:white;
 }
