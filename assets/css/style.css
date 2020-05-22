@@ -1372,7 +1372,13 @@ div.special2 {
     pointer-events: none;
 }
 .right-cat{
-    height: 400px;
+    height: 510px;
     background-image: url(../img/right-cat.jpg);
 
+}
+.top-cat{
+    background-image: url(../img/top-cat.jpg);
+}
+.bootom-cat{
+    background-image: url(../img/bottom-cat.jpg);
 }
