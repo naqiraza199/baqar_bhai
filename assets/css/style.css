@@ -1471,3 +1471,20 @@ div.special2 {
     background-image: url(../img/trend-right.jpg);
     height: 232px;
 }
+.trend-title{
+    text-align: left;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -.17px;
+    line-height: 49px;
+}
+.trend-desc{
+    text-align: left;
+    min-height: 80px;
+    max-width: 180px;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -.06px;
+    line-height: 21px;
+}
