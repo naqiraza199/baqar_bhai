@@ -1462,3 +1462,11 @@ div.special2 {
     white-space: nowrap;
     text-align: center;
 }
+.trend-left{
+    background-image: url(../img/trend-left.jpg);
+    height: 232px;
+}
+.trend-right{
+    background-image: url(../img/trend-right.jpg);
+    height: 232px;
+}
