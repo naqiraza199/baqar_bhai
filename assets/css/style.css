@@ -1477,6 +1477,7 @@ div.special2 {
     font-weight: 700;
     letter-spacing: -.17px;
     line-height: 49px;
+    color: white !important;
 }
 .trend-desc{
     text-align: left;
@@ -1487,4 +1488,5 @@ div.special2 {
     font-weight: 400;
     letter-spacing: -.06px;
     line-height: 21px;
+    color: white !important;
 }
