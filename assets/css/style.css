@@ -1521,3 +1521,6 @@ div.special2 {
     max-width: 210px;
     min-height: 88px;
 }
+.feature-sec img{
+    width: 100%;
+}
