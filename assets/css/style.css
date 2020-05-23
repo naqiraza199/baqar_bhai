@@ -1509,6 +1509,7 @@ div.special2 {
     line-height: 1.1;
     margin-top: 15px;
     margin-bottom: 15px;
+    text-align: left;
 }
 .lenses-desc{
     font-family: Arial;
