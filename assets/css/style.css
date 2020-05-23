@@ -1495,14 +1495,29 @@ div.special2 {
     padding-left:30px ;
 }
 .lenses-right{
-
+    background-image: url(../img/e1739d7a488a29a2e12bce6cef0edaf1.jpg);
+    height: 265px;
 }
 .lenses-left{
-
+    background-image: url(../img/ab9eac9749563166ca97f8dec5ec632e.jpg);
+    height: 265px;
 }
 .lenses-title{
-
+    color: #128fcc;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .lenses-desc{
-    
+    font-family: Arial;
+    color: #2d2d2d;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 38px;
+    text-align: left;
+    max-width: 210px;
+    min-height: 88px;
 }
