@@ -1433,11 +1433,15 @@ div.special2 {
 .line::before{
     content: "";
     height: 3px;
-    border-top: 1px solid white;
+    border-top: 2px solid #d8d8d8;
     /* border-bottom: 1px solid white; */
     position: absolute;
-    width: 300%;
+    width: 100%;
     top: 50%;
-    left: -100%;
+    left: 0%;
     z-index: -999;
+}
+.line{
+    background-color: white;
+    display: inline-block;
 }
