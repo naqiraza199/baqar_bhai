@@ -1465,6 +1465,7 @@ div.special2 {
 .trend-left{
     background-image: url(../img/trend-left.jpg);
     height: 232px;
+    margin-right: 20px;
 }
 .trend-right{
     background-image: url(../img/trend-right.jpg);
