@@ -1445,3 +1445,19 @@ div.special2 {
     background-color: white;
     display: inline-block;
 }
+.feature-title{
+    
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c2c2c;
+    padding: 20px 0;
+}
+.red-price{
+    
+    display: inline-block;
+    font-family: Arial;
+    color: #ff4902;
+    font-size: 18px;
+    white-space: nowrap;
+    text-align: center;
+}
