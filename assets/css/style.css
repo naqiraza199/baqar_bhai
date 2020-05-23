@@ -1497,10 +1497,12 @@ div.special2 {
 .lenses-right{
     background-image: url(../img/e1739d7a488a29a2e12bce6cef0edaf1.jpg);
     height: 265px;
+    background-size: cover;
 }
 .lenses-left{
     background-image: url(../img/ab9eac9749563166ca97f8dec5ec632e.jpg);
     height: 265px;
+    background-size: cover;
 }
 .lenses-title{
     color: #128fcc;
