@@ -3,7 +3,7 @@
 
 {% block content %}
  <script src="/assets/js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
-     <script type="text/javascript">
+      <script type="text/javascript">
         window.jssor_1_slider_init = function() {
 
             var jssor_1_SlideoTransitions = [
@@ -55,29 +55,58 @@
             /*#endregion responsive code end*/
         };
     </script>
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-004-double-tail-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 031 css*/
+        .jssorb031 {position:absolute;}
+        .jssorb031 .i {position:absolute;cursor:pointer;}
+        .jssorb031 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.8;}
+        .jssorb031 .i:hover .b {fill:#fff;fill-opacity:1;stroke:#000;stroke-opacity:1;}
+        .jssorb031 .iav .b {fill:#fff;stroke:#000;stroke-width:1600;fill-opacity:.6;}
+        .jssorb031 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
     <link href="//fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700&subset=latin-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
 
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;height:520px;overflow:hidden;visibility:hidden;">
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1280px;height:520px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="/assets/img/double-tail-spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/double-tail-spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1280px;height:520px;overflow:hidden;">
             <div style="background-color:#ffffff;">
-                <img data-u="image" style="opacity:0.5;" src="/assets/img/banner-02.1-min.jpg" />
-                <div style="left:67px;top:125px;width:363px;height:69px;position:absolute;color:#F20A35;font-family:Oswald,sans-serif;font-size:50px;font-weight:800;line-height:1.2;text-align:center;">25 % OFF</div>
-                <div style="left:141px;top:207px;width:471px;height:140px;position:absolute;color:#000000;font-size:48px;line-height:1.2;text-align:left;">Sign Up Now !</div>
+                <img data-u="image" style="opacity:0.5;" src="img/banner-02.1-min.jpg" />
+                <div style="left:61px;top:126px;width:209px;height:250px;position:absolute;color:#7C05A3;font-family:Oswald,sans-serif;font-size:72px;font-weight:800;line-height:1.2;text-align:center;"><p>&nbsp;25%<br /><b>OFF<b></b></b></p><p /></div>
+                <div style="left:53px;top:118px;width:471px;height:62px;position:absolute;color:#000000;font-size:48px;line-height:1.2;text-align:left;">Sign Up Now !</div>
             </div>
             <div>
-                <img data-u="image" src="/assets/img/web-banner-min.jpg" />
+                <img data-u="image" src="img/web-banner-min.jpg" />
                 <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
                     <div data-to="50% 50%" data-t="0" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;"></div>
                 </div>
             </div>
             <div>
-                <img data-u="image" src="/assets/img/banner-2.jpg" />
-                <div style="left:85px;top:242px;width:706px;height:125px;position:absolute;color:#000000;font-size:48px;line-height:1.2;text-align:left;">TAKE AN EXTRA<br /><span class="sale">&nbsp;20 %</span><br><span>OFF</span></div>
-                <img style="left:75px;top:81px;width:237px;height:93px;position:absolute;max-width:237px;" src="/assets/img/rb.png" />
+                <img data-u="image" src="img/banner-2.jpg" />
+                <div style="left:81px;top:218px;width:419px;height:125px;position:absolute;color:#000000;font-size:48px;font-weight:700;line-height:1.2;text-align:left;">TAKE AN EXTRA<br />&nbsp;20% OFF</div>
+                <img style="left:75px;top:83px;width:237px;height:93px;position:absolute;max-width:237px;" src="img/rb.png" />
             </div>
         </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
         <!-- Bullet Navigator -->
