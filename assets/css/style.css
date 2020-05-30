@@ -1527,3 +1527,8 @@ div.special2 {
 .feature-sec img{
     width: 100%;
 }
+@media (max-width:768px){
+    .shop-container{
+        padding: 0;
+    }
+}
