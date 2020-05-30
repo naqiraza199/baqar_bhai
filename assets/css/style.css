@@ -848,7 +848,7 @@ a:hover {
     -webkit-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 38px -12px rgb(125, 78, 161);
     background: #fff;
-    border: 2px solid #7f4fa3 !important;
+   /* border: 2px solid #7f4fa3 !important;*/
     border-radius: 3px;
 }
 
