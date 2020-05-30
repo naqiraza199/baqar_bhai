@@ -1536,3 +1536,9 @@ div.special2 {
     
     font-size: 12px;
 }
+.blog-4{
+    -webkit-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 38px -12px rgb(125, 78, 161);
+    background: #fff;
+    border-radius: 3px;
+}
