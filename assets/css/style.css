@@ -1531,6 +1531,9 @@ div.special2 {
     .shop-container{
         padding: 0;
     }
+    .shop-container .col-sm-6 {
+        padding-right: 0;
+    }
 }
 .blog-4-text{
     
