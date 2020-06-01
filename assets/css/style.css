@@ -1626,3 +1626,6 @@ div.special2 {
 .mySlides.fade{
     opacity: 100;
 }
+.popular-styles{
+    max-width: 267px;
+}
