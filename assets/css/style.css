@@ -1580,13 +1580,15 @@ div.special2 {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    color: rgb(14, 30, 37);
+    font-size: 31px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    top: 80px;
+    width: 100%;
+    text-align: left;
+    margin-left: 65px;
 }
 
 /* Number text (1/3 etc) */
@@ -1621,3 +1623,6 @@ div.special2 {
   .prev, .next,.text {font-size: 11px}
 }
 .mySlides {display: none}
+.mySlides.fade{
+    opacity: 100;
+}
