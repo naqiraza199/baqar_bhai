@@ -202,12 +202,17 @@ a:hover {
     padding: 4em 0 0 0;
 }
 
+footer.site-footer.border-top {
+    background: linear-gradient(45deg, #6c66cc, #473fbd);
+    border-radius: 100px 0px 100px 0px;
+}
+
 .site-footer ul li {
     margin-bottom: 10px;
 }
 
 .site-footer ul li a {
-    color: #5c626e;
+    color: #ffffff;
 }
 
 .site-footer ul li a:hover {
@@ -216,7 +221,7 @@ a:hover {
 
 .site-footer .footer-heading {
     font-size: 20px;
-    color: #25262a;
+    color: #ffffff;
 }
 
 
@@ -889,7 +894,15 @@ a:hover {
     padding-left: 30px;
     position: relative;
     margin-bottom: 15px;
-    color: #25262a;
+    color: #ffffff;
+}
+
+footer li.phone {
+    color: #fff;
+}
+
+footer li.address {
+    color: #fff;
 }
 
 .block-5 ul li:before {
@@ -919,6 +932,10 @@ a:hover {
     display: block;
 }
 
+footer a {
+    color: #fff;
+}
+
 .block-6 img {
     display: block;
 }
@@ -929,6 +946,10 @@ a:hover {
 
 .block-6 p {
     color: #737b8a;
+}
+
+footer .block-6 p {
+    color: #fff;
 }
 
 .block-7 .form-group {
