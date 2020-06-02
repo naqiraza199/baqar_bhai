@@ -17,6 +17,17 @@ img.img-fluid {
     font-size: 12px;
 }
 
+.block-4-text.p-4.blog {}
+
+.block-4-text.p-4.blog h3 a {
+    color: #000 !important;
+}
+
+.block-4-text.p-4.blog {
+    background: #fff;
+    color: #000;
+}
+
 p.text-primary.font-weight-bold {
     
     font-size: 24px;
@@ -850,6 +861,11 @@ a:hover {
     background: #fff;
     border: 2px solid #7f4fa3 !important;
     border-radius: 3px;
+}
+
+.block-4.blog {
+    border-radius: 8px;
+    box-shadow: 17px 6px 18px 20px #5405523d;
 }
 
 .block-4 .block-4-text h3 {
