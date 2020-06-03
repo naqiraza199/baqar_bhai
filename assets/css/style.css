@@ -1666,3 +1666,18 @@ div.special2 {
 .popular-styles{
     max-width: 267px;
 }
+select{
+    background: #fff url(//cdn.shopify.com/s/files/1/0883/8564/t/7/assets/select.png?v=1634438…) no-repeat 96% 50%;
+background-size: 18px 12px;
+padding: 8px 14px 8px;
+border-radius: 3px;
+border: 1px solid #d9dbdc;
+-webkit-appearance: none;
+-ms-appearance: none;
+-moz-appearance: none;
+-o-appearance: none;
+appearance: none;
+-moz-appearance: none;
+text-indent: 0.01px;
+text-overflow: '';
+}
