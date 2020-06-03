@@ -1683,3 +1683,6 @@ text-overflow: '';
 width: 100%;
     margin-bottom: 15px;
 }
+.inline{
+    display: inline-block;
+}
