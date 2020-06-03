@@ -1687,4 +1687,7 @@ width: 100%;
     .inline{
         display: inline-block;
     }
+    .inline-img{
+        float: left;
+    }
 }
