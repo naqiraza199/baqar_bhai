@@ -1710,9 +1710,7 @@ width: 100%;
         width: 100%;
         top:0;
     }
-    #myHeader{
-        position: fixed;
-    }
+    
 }
 @media (min-width:767px){
     .stickys {
@@ -1732,5 +1730,10 @@ width: 100%;
 }
 .deskhead{
     display: none;
+}
+@media (max-width:425px){
+    #myHeader{
+        position: fixed;
+    }
 }
 
