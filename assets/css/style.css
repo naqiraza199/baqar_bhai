@@ -1710,6 +1710,9 @@ width: 100%;
         width: 100%;
         top:0;
     }
+    #myHeader{
+        position: fixed;
+    }
 }
 @media (min-width:767px){
     .stickys {
