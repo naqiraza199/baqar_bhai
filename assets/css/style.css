@@ -1700,13 +1700,11 @@ width: 100%;
     width: -webkit-fill-available;
     left: 0px;
     }
-    .sticky{
-        position: fixed;
-    }
+    
 }
 @media (min-width:767px){
     .stickys {
-        position: fixed;
+    
         width: 100%;
         top:0;
     }
@@ -1720,4 +1718,7 @@ width: 100%;
 }
 .deskhead{
     display: none;
+}
+.sticky{
+    position: fixed;
 }
