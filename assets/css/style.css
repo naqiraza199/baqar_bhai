@@ -1725,12 +1725,12 @@ width: 100%;
     .fixed-img{
         display: none;
     }
+    .stickys{
+        position: fixed;
+        display: block ;
+    }
 }
 .deskhead{
     display: none;
 }
 
-.stickys{
-    position: fixed;
-    display: block !important;
-}
