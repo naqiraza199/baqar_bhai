@@ -1709,9 +1709,7 @@ width: 100%;
         top:0;
     }
     
-    .stickys {
-        display: block !important;
-    }
+    
     .fixed-img{
         display: none;
     }
@@ -1719,6 +1717,8 @@ width: 100%;
 .deskhead{
     display: none;
 }
+
 .stickys{
     position: fixed;
+    display: block !important;
 }
