@@ -1714,6 +1714,9 @@ width: 100%;
     .stickys {
         display: block !important;
     }
+    .fixed-img{
+        display: none;
+    }
 }
 .deskhead{
     display: none;
