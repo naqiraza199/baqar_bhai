@@ -1707,6 +1707,8 @@ width: 100%;
 @media (min-width:767px){
     .stickys {
         position: fixed;
+        width: 100%;
+        top:0;
     }
     .deskhead{
         display: none;
