@@ -1700,7 +1700,9 @@ width: 100%;
     width: -webkit-fill-available;
     left: 0px;
     }
-    
+    .fixed-img{
+        display: block;
+    }
 }
 @media (min-width:767px){
     .stickys {
