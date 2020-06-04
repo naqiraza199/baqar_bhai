@@ -1709,3 +1709,9 @@ width: 100%;
         position: fixed;
     }
 }
+.deskhead{
+    display: none;
+}
+#deskHeader .deskhead{
+    display: block !important;
+}
