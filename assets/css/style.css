@@ -1690,4 +1690,7 @@ width: 100%;
     .inline-img{
         float: left;
     }
+    .mobile{
+        position: inherit;
+    }
 }
