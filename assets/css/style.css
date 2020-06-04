@@ -1710,10 +1710,11 @@ width: 100%;
         width: 100%;
         top:0;
     }
-    .deskhead{
-        display: none;
-    }
+    
     .stickys {
         display: block !important;
     }
+}
+.deskhead{
+    display: none;
 }
