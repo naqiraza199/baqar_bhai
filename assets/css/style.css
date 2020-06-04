@@ -1727,7 +1727,7 @@ width: 100%;
     }
     .stickys{
         position: fixed;
-        display: block ;
+        display: block !important;
     }
 }
 .deskhead{
