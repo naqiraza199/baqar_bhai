@@ -1693,4 +1693,11 @@ width: 100%;
     .mobile, .mobile nav{
         position: inherit;
     }
+    .mobile .navbar-collapse{
+        position: absolute;
+    top: 93%;
+    background-color: white;
+    width: -webkit-fill-available;
+    left: 0px;
+    }
 }
