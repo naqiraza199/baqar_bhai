@@ -1706,6 +1706,10 @@ width: 100%;
     .rnt{
         position: inherit;
     }
+    .stickys{
+        width: 100%;
+        top:0;
+    }
 }
 @media (min-width:767px){
     .stickys {
