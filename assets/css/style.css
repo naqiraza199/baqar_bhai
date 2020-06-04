@@ -1701,7 +1701,7 @@ width: 100%;
     left: 0px;
     }
     .fixed-img{
-        display: block !important;
+        display: inline-block !important;
     }
 }
 @media (min-width:767px){
