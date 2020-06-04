@@ -1703,6 +1703,9 @@ width: 100%;
     .fixed-img{
         display: inline-block !important;
     }
+    .rnt{
+        position: inherit;
+    }
 }
 @media (min-width:767px){
     .stickys {
