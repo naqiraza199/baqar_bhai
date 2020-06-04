@@ -1705,13 +1705,13 @@ width: 100%;
     }
 }
 @media (min-width:767px){
-    .stickys{
+    .stickys .deskhead{
         position: fixed;
     }
 }
 .deskhead{
     display: none;
 }
-#deskHeader .deskhead{
+.stickys .deskhead{
     display: block !important;
 }
