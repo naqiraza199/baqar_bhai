@@ -1708,10 +1708,10 @@ width: 100%;
     .stickys .deskhead{
         position: fixed;
     }
-}
-.deskhead{
-    display: none;
-}
-.stickys .deskhead{
-    display: block !important;
+    .deskhead{
+        display: none;
+    }
+    .stickys {
+        display: block !important;
+    }
 }
