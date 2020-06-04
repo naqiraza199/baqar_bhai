@@ -1700,4 +1700,7 @@ width: 100%;
     width: -webkit-fill-available;
     left: 0px;
     }
+    .sticky{
+        position: fixed;
+    }
 }
