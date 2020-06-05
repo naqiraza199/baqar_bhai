@@ -1739,4 +1739,8 @@ width: 100%;
         position: fixed;
     }
 }
-
+.site-footer .row {
+  
+    border-top: 1px solid black;
+    padding-top: 12px;
+}
