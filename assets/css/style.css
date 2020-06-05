@@ -933,7 +933,10 @@ footer li.address {
 }
 
 footer a {
-    color: #fff;
+    color: black;
+}
+footer a:hover{
+    color:#7e4ea2;
 }
 
 .block-6 img {
