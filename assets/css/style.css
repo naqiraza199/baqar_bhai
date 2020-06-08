@@ -1713,6 +1713,9 @@ width: 100%;
         width: 100%;
         top:0;
     }
+    #myHeader{
+        display: none;
+    }
     
 }
 @media (min-width:767px){
@@ -1722,7 +1725,9 @@ width: 100%;
         top:0;
     }
     
-    
+    .deskhead{
+        display: none;
+    }
     .fixed-img{
         display: none;
     }
@@ -1731,9 +1736,7 @@ width: 100%;
         display: block !important;
     }
 }
-.deskhead{
-    display: none;
-}
+
 @media (max-width:425px){
     #myHeader{
         position: fixed;
