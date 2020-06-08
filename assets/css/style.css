@@ -1737,6 +1737,7 @@ width: 100%;
 @media (max-width:425px){
     #myHeader{
         position: fixed;
+        display: none;
     }
 }
 .site-footer .row {
