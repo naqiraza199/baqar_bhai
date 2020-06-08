@@ -1741,6 +1741,9 @@ width: 100%;
         position: fixed;
         display: block !important;
     }
+    li.nav-item {
+        width: 14%;
+    }
 }
 
 @media (max-width:425px){
