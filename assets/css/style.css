@@ -1721,7 +1721,7 @@ width: 100%;
         display: block !important;
     }
     .deskhead{
-        display: block;
+        display: block !important;
     }
 }
 @media (min-width:767px){
