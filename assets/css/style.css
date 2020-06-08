@@ -1744,6 +1744,9 @@ width: 100%;
     li.nav-item {
         width: 14%;
     }
+    .navbar-nav{
+        width: 90%;
+    }
 }
 
 @media (max-width:425px){
