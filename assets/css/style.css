@@ -1771,6 +1771,9 @@ width: 100%;
     div.special2{
         margin-top: 3%;
     }
+    .bottom-cat{
+        width: auto !important;
+    }
 }
 .site-footer .row {
   
