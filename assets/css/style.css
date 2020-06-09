@@ -1730,7 +1730,7 @@ width: 100%;
         margin-right: 6%;
     }
 }
-@media only screen and  (min-width:767px){
+@media only screen and  (min-width:770px){
     .stickys {
     
         width: 100%;
@@ -1753,13 +1753,12 @@ width: 100%;
     .navbar-nav{
         width: 90%;
     }
-    
-}
-@media only screen and  (min-width:770px){
     div.special1{
         margin-right: 12%;
     }
+    
 }
+
 
 @media (max-width:425px){
     #myHeader{
