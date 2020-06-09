@@ -7,7 +7,9 @@ body {
     font-size: 16px;
     overflow-x: hidden;
 }
-
+html{
+    overflow-x: hidden;
+}
 img.img-fluid {
     height: -webkit-fill-available;
 }
@@ -18,7 +20,7 @@ img.img-fluid {
     font-size: 12px;
 }
 
-.block-4-text.p-4.blog {}
+
 
 .block-4-text.p-4.blog h3 a {
     color: #000 !important;
