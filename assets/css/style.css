@@ -1730,7 +1730,7 @@ width: 100%;
         margin-right: 6%;
     }
     .wel-txt{
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 }
 @media only screen and  (min-width:770px){
@@ -1759,9 +1759,7 @@ width: 100%;
     div.special1{
         margin-right: 12%;
     }
-    .wel-txt{
-        font-size: 24px;
-    }
+ 
 }
 
 
