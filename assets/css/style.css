@@ -1765,6 +1765,9 @@ width: 100%;
         position: fixed;
         display: none;
     }
+    div.special1 {
+        margin-right: 0% !important;
+    }
 }
 .site-footer .row {
   
