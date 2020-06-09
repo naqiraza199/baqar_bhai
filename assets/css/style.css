@@ -1726,6 +1726,9 @@ width: 100%;
     .deskhead{
         display: block !important;
     }
+    div.special1{
+        margin-right: 6%;
+    }
 }
 @media (min-width:767px){
     .stickys {
@@ -1749,6 +1752,9 @@ width: 100%;
     }
     .navbar-nav{
         width: 90%;
+    }
+    div.special1{
+        margin-right: 12%;
     }
 }
 
