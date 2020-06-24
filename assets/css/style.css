@@ -1795,7 +1795,7 @@ width: 100%;
 .nav-link{
     text-transform: uppercase;
 }
-.dropdown {
+.a.nav-link.dropdown {
     position: relative;
     display: inline-block;
   }
