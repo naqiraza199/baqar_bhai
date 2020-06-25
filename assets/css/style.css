@@ -1813,3 +1813,6 @@ width: 100%;
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  li.nav-item {
+    cursor: pointer;
+}
