@@ -1836,11 +1836,12 @@ div.column12-con{
     margin-right: 100px;
 }
 .col-md-2.float-lef.column-style-21{
-    padding: 15px 28px 0px 28px;
+    padding: 15px 28px 5px 28px;
     text-align: center;
     border: 1px solid;
     font-size: 16px;
     margin-top: 16px;
+    margin-right: 18px;
     font-weight: bolder;
     color: #000;
 }
@@ -1848,6 +1849,6 @@ span.btn21 {
     background: #000;
     color: #fff;
     text-align: center;
-    margin-left: -29px;
-    padding: 5px 46px 5px 46px;
+    margin-left: -28px;
+    padding: 5px 61px 5px 61px;
 }
