@@ -1824,3 +1824,18 @@ width: 100%;
 .float-lef{
     float: left;
 }
+div.heading21{
+    background: #f27420;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+column-style-21{
+    padding: 28px;
+    text-align: center;
+    border: 1px solid;
+    font-size: 16px;
+    margin-top: 16px;
+    font-weight: bolder;
+    color: #000;
+}
