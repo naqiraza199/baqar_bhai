@@ -38,23 +38,41 @@
     <div class="site-section widht80" data-aos="fade">
         <div class="container">
         <div class="heading21"><span>1: What do you use your glasses for?</span></div>
-           <div class="col-md-12 column12-con">           
-           <div class="col-md-4 float-lef column-style-21">
-           <p>Single Vision</p>
-           <p>Distance</p>
-           <span class="btn21">Included</span>
-           </div>
-           <div class="col-md-4 float-lef column-style-21">
-           <p>Single Vision</p>
-           <p>Distance</p>
-           <span class="btn21">Included</span>
-           </div>
-           <div class="col-md-4 float-lef column-style-21">
-           <p>Single Vision</p>
-           <p>Distance</p>
-           <span class="btn21">Included</span>
-           </div>
-           </div>
+          <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
         </div>
     </div>
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 {% endblock %}
