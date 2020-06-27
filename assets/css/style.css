@@ -1898,3 +1898,10 @@ span.btn21 {
     padding: 6px 12px;
     border-top: none;
   }
+  td {
+    padding-right: 64px;
+    padding-left: 21px;
+}
+th {
+    padding: 20px;
+}
