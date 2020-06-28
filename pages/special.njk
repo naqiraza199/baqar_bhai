@@ -52,10 +52,11 @@
         <div class="container">
         <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-     <th>Country</th> <td>Italy</td>
+    <th></th>
+    <th>Sphere (SPH)</th>
+    <th>Cylinder (CYL)</th>
+    <th>Axis (AXI)</th>
+     <th>Add (Near addition)</th> 
   </tr>
   <tr>
     <td>Alfreds Futterkiste</td>
@@ -63,9 +64,20 @@
     <td>Germany</td> <td>Italy</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td> <td>Italy</td>
-    <td>Mexico</td> <td>Italy</td>
+    <td>
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+</td>
+    <td>Right (OD)</td> 
+    <td>Left (OS)</td>
+    <td>PD </td> 
+    <td>Near PD</td>
   </tr>
   <tr>
     <td>Ernst Handel</td>
@@ -120,6 +132,27 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 {% endblock %}
