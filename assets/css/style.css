@@ -1905,25 +1905,23 @@ span.btn21 {
 th {
     padding: 20px;
 }
-.dropbtn {
+.dropbtn1 {
     background-color: #fff;
     color: #000;
-    padding: 16px;
+    padding: 3px 17px;
+    text-align: left;
     border: 1px solid #000;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
   
-  .dropdown {
+  .dropdown1 {
     position: relative;
     display: inline-block;
   }
   
-  .dropdown-content {
+  .dropdown1-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -1932,13 +1930,13 @@ th {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  .dropdown-content a {
+  .dropdown1-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .dropdown1 a:hover {background-color: #ddd;}
   
   .show {display: block;}  
