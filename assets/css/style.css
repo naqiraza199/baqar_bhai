@@ -1947,6 +1947,6 @@ th {
   .login-button{
     text-align: center;
     background: #642d92;
-    color: #fff;
+    color: #fff !important;
     padding: 10px 35px;
   }
