@@ -1862,6 +1862,7 @@ span.btn21 {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    margin-bottom: 30px;
   }
   
   /* Style the buttons inside the tab */
