@@ -1944,3 +1944,9 @@ th {
       margin-top: 50px;
       border-bottom: 2px solid;
   }
+  .login-button{
+    text-align: center;
+    background: #642d92;
+    color: #fff;
+    padding: 10px 35px;
+  }
