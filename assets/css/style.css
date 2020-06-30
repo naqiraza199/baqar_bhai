@@ -1967,3 +1967,8 @@ th {
     padding-bottom: 20px;
 }
   }
+.cart-button{
+    background: orange;
+    color: #fff;
+    padding: 10px 67px;
+}
