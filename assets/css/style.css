@@ -1968,7 +1968,7 @@ th {
 }
   }
 
-  .media1{
+  .input#img{
     overflow: hidden;
     position: absolute;
     top: 0;
