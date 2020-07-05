@@ -1311,6 +1311,7 @@ div.special2 {
     float: right;
     padding: 29px 40px 13px 0px;
     background: linear-gradient(45deg, #4740a5, #7c75e7);
+    margin-bottom: 28px;
 }
 
 .white {
@@ -1533,7 +1534,7 @@ div.special2 {
 }
 .trend-inner{
     padding-top: 20px;
-    padding-left:30px ;
+    padding-left:10px ;
 }
 .lenses-right{
     background-image: url(../img/e1739d7a488a29a2e12bce6cef0edaf1.jpg);
@@ -1758,6 +1759,7 @@ width: 100%;
     }
     div.special1{
         margin-right: 12%;
+        margin-bottom: 28px;
     }
     .wel-txt{
         font-size: 1.5rem;
