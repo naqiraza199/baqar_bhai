@@ -40,6 +40,12 @@ p.text-primary.font-weight-bold {
     color: #fff;
 }
 
+a.text-primary.font-weight-bold {
+    border: 2px solid #fff;
+    padding: 1px 16px;
+    color: #fff !important;
+}
+
 .bg-light.py-3 {
     background: linear-gradient(45deg, #8954b1, #64427f) !important;
 }
