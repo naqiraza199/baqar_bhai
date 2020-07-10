@@ -2073,3 +2073,9 @@ span img {
     height: 12px;
     width: 12px;
 }
+h4.card-title span {
+    margin-right: 5px;
+}
+h4.card-title {
+    text-align: center;
+}
