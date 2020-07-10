@@ -2068,3 +2068,8 @@ th {
 header {
     padding-bottom: 16px;
 }
+span img {
+    border-radius: 63px;
+    height: 12px;
+    width: 12px;
+}
