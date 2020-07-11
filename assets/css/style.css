@@ -2106,3 +2106,33 @@ h4.card-title {
 .black {
     background: black;
 }
+label.btn.rounded-circle.p-3.m-2 {
+    padding: 8px !important;
+}
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+h5 {
+    font-family: 'Poppins', sans-serif;
+}
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+}
