@@ -2079,3 +2079,27 @@ h4.card-title span {
 h4.card-title {
     text-align: center;
 }
+.grey {
+    background: grey;
+}
+.green {
+    background: green;
+}
+.red {
+    background: red;
+}
+.orange {
+    background: orange;
+}
+.indigo {
+    background: indigo;
+}
+.blue {
+    background: blue;
+}
+.purple {
+    background: purple;
+}
+.yellow {
+    background: yellow;
+}
